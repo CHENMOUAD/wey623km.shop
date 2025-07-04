@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+<script>
+  function k2() {
+             window.open('https://www.qq.com', '_blank');
+        }
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>2025</title>
+    <title>AI株式投資教育プラットフォーム</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -26,6 +31,17 @@
         }
     </script>
     <style>
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans CJK JP", Meiryo, sans-serif;
+            letter-spacing: 0.025em;
+        }
+        
         @keyframes pulse-glow {
             0%, 100% { box-shadow: 0 0 20px rgba(220, 38, 38, 0.6); transform: scale(1); }
             50% { box-shadow: 0 0 30px rgba(220, 38, 38, 0.9); transform: scale(1.05); }
@@ -62,16 +78,16 @@
     <!-- メインコンテナ -->
     <div class="mainWrapper md:pt-12 pt-2">
         <!-- ヒーローセクション -->
-        <section class="heroSection gradient-bg min-h-screen flex items-center justify-center relative overflow-hidden">
-            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <section class="heroSection min-h-screen flex items-center justify-center relative overflow-hidden" style="background-image: url('img/b.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+            <div class="absolute inset-0 bg-gradient-to-r from-black via-black to-transparent opacity-80"></div>
             <div class="container mx-auto px-4 relative z-10">
                 <div class="grid lg:grid-cols-2 gap-8 items-center">
-                    <div class="textContent space-y-6">
-                        <h1 class="titleMain text-4xl md:text-6xl font-bold leading-tight">
-                            <span class="text-secondary">AI技術</span>で向上させる<br>
-                            <span class="text-white">投資スキル</span>
+                    <div class="textContent space-y-6 bg-black bg-opacity-40 p-6 rounded-xl">
+                        <h1 class="titleMain text-4xl md:text-6xl font-bold leading-tight drop-shadow-lg">
+                            <span class="text-secondary drop-shadow-lg">AI技術</span>で向上させる<br>
+                            <span class="text-white drop-shadow-lg">投資スキル</span>
                         </h1>
-                        <p class="descriptionText text-lg md:text-xl text-gray-200 leading-relaxed">
+                        <p class="descriptionText text-lg md:text-xl text-gray-100 leading-relaxed drop-shadow-md">
                             変化の激しい株式市場において、成功する投資家は常に先を行っています。当社のAI駆動株式教育プラットフォームを通じて、賢明な投資決定を行うためのツールと知識を獲得できます。
                         </p>
                         <button onclick="k2()" class="ctaButton bg-accent hover:bg-red-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 animate-pulse-glow">
@@ -79,7 +95,41 @@
                         </button>
                     </div>
                     <div class="imageContainer">
-                        <img src="img/2.jpg" alt="AI投資教育" class="rounded-2xl depth-shadow w-full">
+                        <img src="img/3.jpg" alt="1" class="rounded-2xl depth-shadow w-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 堀江貴文セクション -->
+        <section class="horieSakionSection bg-gradient-to-r from-slate-900 via-depth to-slate-900 md:py-16 py-2">
+            <div class="container mx-auto px-4">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="profileImage">
+                        <img src="img/2.jpg" alt="堀江貴文" class="rounded-2xl depth-shadow w-full">
+                    </div>
+                    <div class="profileContent">
+                        <h2 class="profileTitle text-3xl md:text-4xl font-bold mb-6">
+                            <span class="text-secondary">堀江貴文</span>
+                        </h2>
+                        
+                        <div class="profileInfo space-y-4">
+                            <p class="titleText text-xl font-semibold text-gray-200 mb-4">
+                                東京大学出身の起業家・投資家・実業家
+                            </p>
+                            
+                            <p class="descriptionBio text-lg text-gray-300 leading-relaxed mb-4">
+                                1972年生まれ、東京大学在学中に起業し、創業したインターネット企業を東証マザーズに上場させ、時価総額8,000億円規模にまで成長させた伝説的な起業家です。
+                            </p>
+                            
+                            <p class="currentRole text-lg text-gray-300 leading-relaxed mb-4">
+                                現在は、SNS media & consulting株式会社のファウンダー、インターステラテクノロジズ株式会社のファウンダー、ゼロ高等学院の主宰など、数多くの役職を務めております。
+                            </p>
+                            
+                            <p class="expertise text-lg text-gray-200 leading-relaxed font-medium">
+                                投資のプロフェッショナルとして培ってきた豊富な経験と知識を、惜しみなく共有いたします。
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -168,8 +218,70 @@
                     </div>
                     
                     <div class="benefitsImage">
-                        <img src="img/1.jpg" alt="投資教育" class="rounded-2xl depth-shadow w-full">
+                        <img src="img/1.jpg" alt="1" class="rounded-2xl depth-shadow w-full">
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ユーザーレビューセクション -->
+        <section class="userReviewsSection bg-gradient-to-r from-depth to-slate-800 md:py-16 py-2">
+            <div class="container mx-auto px-4">
+                <h2 class="reviewsTitle text-3xl md:text-4xl font-bold text-center mb-12">
+                    <span class="text-secondary">参加者</span>の声
+                </h2>
+                
+                <div class="reviewsGrid grid md:grid-cols-3 gap-8">
+                    <div class="reviewCard glass-effect rounded-xl p-6 transform hover:scale-105 transition-all duration-300">
+                        <div class="userInfo flex items-center mb-4">
+                            <div class="avatar w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white font-bold">
+                                田
+                            </div>
+                            <div class="userDetails ml-4">
+                                <h4 class="userName text-lg font-semibold text-white">田中 Tさん</h4>
+                                <p class="userRole text-sm text-gray-400">会社員・30代</p>
+                            </div>
+                        </div>
+                        <p class="reviewText text-gray-300 leading-relaxed text-sm">
+                            「投資について全く知識がありませんでしたが、AI技術を使った学習システムで自分のペースで進められました。基礎から丁寧に教えてもらい、徐々に市場の動きが理解できるようになってきています。」
+                        </p>
+                    </div>
+                    
+                    <div class="reviewCard glass-effect rounded-xl p-6 transform hover:scale-105 transition-all duration-300">
+                        <div class="userInfo flex items-center mb-4">
+                            <div class="avatar w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white font-bold">
+                                佐
+                            </div>
+                            <div class="userDetails ml-4">
+                                <h4 class="userName text-lg font-semibold text-white">佐藤 Sさん</h4>
+                                <p class="userRole text-sm text-gray-400">フリーランス・40代</p>
+                            </div>
+                        </div>
+                        <p class="reviewText text-gray-300 leading-relaxed text-sm">
+                            「これまで独学で投資をしていましたが、体系的な知識が不足していることを感じていました。こちらの教育プラットフォームで学習し、リスク管理や分析手法について新しい視点を得られました。」
+                        </p>
+                    </div>
+                    
+                    <div class="reviewCard glass-effect rounded-xl p-6 transform hover:scale-105 transition-all duration-300">
+                        <div class="userInfo flex items-center mb-4">
+                            <div class="avatar w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white font-bold">
+                                鈴
+                            </div>
+                            <div class="userDetails ml-4">
+                                <h4 class="userName text-lg font-semibold text-white">鈴木 Rさん</h4>
+                                <p class="userRole text-sm text-gray-400">主婦・50代</p>
+                            </div>
+                        </div>
+                        <p class="reviewText text-gray-300 leading-relaxed text-sm">
+                            「老後の資産形成について真剣に考え始めたタイミングで参加しました。専門用語が多くて不安でしたが、分かりやすい説明と豊富な教材のおかげで、少しずつ理解が深まっています。」
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <p class="noteText text-gray-400 text-sm">
+                        ※ 上記は参加者の個人的な学習体験談であり、投資の成果を保証するものではありません。
+                    </p>
                 </div>
             </div>
         </section>
@@ -228,11 +340,7 @@
     </div>
 
     <script>
-        function k2() {
-            // LINE連携のロジックをここに実装
-            console.log('LINE連携ボタンがクリックされました');
-            // window.open('LINE_URL', '_blank');
-        }
+      
 
         // ダークモード対応
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {

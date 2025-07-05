@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<script>
-  function k2() {
-             window.open('https://www.qq.com', '_blank');
-        }
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>AI株式投資教育プラットフォーム</title>
@@ -90,9 +85,14 @@
                         <p class="descriptionText text-lg md:text-xl text-gray-100 leading-relaxed drop-shadow-md">
                             変化の激しい株式市場において、成功する投資家は常に先を行っています。当社のAI駆動株式教育プラットフォームを通じて、賢明な投資決定を行うためのツールと知識を獲得できます。
                         </p>
-                        <button onclick="k2()" class="ctaButton bg-accent hover:bg-red-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 animate-pulse-glow">
-                            今すぐ私たちの学習に参加
-                        </button>
+                        <div class="buttonGroup flex flex-col sm:flex-row gap-4">
+                            <button onclick="k2()" class="ctaButton bg-accent hover:bg-red-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 animate-pulse-glow">
+                                今すぐ私たちの学習に参加
+                            </button>
+                            <button onclick="showLoginModal()" class="loginButton bg-transparent border-2 border-secondary text-secondary hover:bg-secondary hover:text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105">
+                                ログイン / 登録
+                            </button>
+                        </div>
                     </div>
                     <div class="imageContainer">
                         <img src="img/3.jpg" alt="1" class="rounded-2xl depth-shadow w-full">
@@ -105,7 +105,7 @@
         <section class="horieSakionSection bg-gradient-to-r from-slate-900 via-depth to-slate-900 md:py-16 py-2">
             <div class="container mx-auto px-4">
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div class="profileImage">
+                    <div class="profileImage lg:block hidden">
                         <img src="img/2.jpg" alt="堀江貴文" class="rounded-2xl depth-shadow w-full">
                     </div>
                     <div class="profileContent">
@@ -117,6 +117,10 @@
                             <p class="titleText text-xl font-semibold text-gray-200 mb-4">
                                 東京大学出身の起業家・投資家・実業家
                             </p>
+                            
+                            <div class="profileImageMobile lg:hidden block mb-4">
+                                <img src="img/2.jpg" alt="堀江貴文" class="rounded-2xl depth-shadow w-full">
+                            </div>
                             
                             <p class="descriptionBio text-lg text-gray-300 leading-relaxed mb-4">
                                 1972年生まれ、東京大学在学中に起業し、創業したインターネット企業を東証マザーズに上場させ、時価総額8,000億円規模にまで成長させた伝説的な起業家です。
@@ -218,7 +222,66 @@
                     </div>
                     
                     <div class="benefitsImage">
-                        <img src="img/1.jpg" alt="1" class="rounded-2xl depth-shadow w-full">
+                        <img src="img/1.jpg" alt="投資教育" class="rounded-2xl depth-shadow w-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 専属コミュニティ福利セクション -->
+        <section class="communityBenefitsSection bg-gradient-to-b from-slate-800 to-depth md:py-16 py-2">
+            <div class="container mx-auto px-4">
+                <h2 class="communityTitle text-3xl md:text-4xl font-bold text-center mb-12">
+                    <span class="text-secondary">専属コミュニティ</span>福利
+                </h2>
+                
+                <div class="benefitsGrid grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="benefitCard glass-effect rounded-xl p-6 transform hover:scale-105 transition-all duration-300">
+                        <div class="benefitIcon w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-4">
+                            <span class="text-2xl">💬</span>
+                        </div>
+                        <h3 class="benefitTitle text-xl font-semibold mb-3 text-secondary">会員専属交流フォーラム</h3>
+                        <p class="benefitDescription text-gray-300 text-sm">会員限定のフォーラムで、他の学習者と市場トレンド、戦略、経験について深く議論できます。</p>
+                    </div>
+                    
+                    <div class="benefitCard glass-effect rounded-xl p-6 transform hover:scale-105 transition-all duration-300">
+                        <div class="benefitIcon w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-4">
+                            <span class="text-2xl">❓</span>
+                        </div>
+                        <h3 class="benefitTitle text-xl font-semibold mb-3 text-secondary">毎月専門家Q&A</h3>
+                        <p class="benefitDescription text-gray-300 text-sm">毎月業界専門家とのQ&Aセッションを開催し、直接質問して専門的な見解を得ることができます。</p>
+                    </div>
+                    
+                    <div class="benefitCard glass-effect rounded-xl p-6 transform hover:scale-105 transition-all duration-300">
+                        <div class="benefitIcon w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-4">
+                            <span class="text-2xl">📚</span>
+                        </div>
+                        <h3 class="benefitTitle text-xl font-semibold mb-3 text-secondary">独占学習リソース</h3>
+                        <p class="benefitDescription text-gray-300 text-sm">電子書籍、ビデオチュートリアル、市場分析レポートを含む専属学習資料ライブラリへのアクセス。</p>
+                    </div>
+                    
+                    <div class="benefitCard glass-effect rounded-xl p-6 transform hover:scale-105 transition-all duration-300">
+                        <div class="benefitIcon w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-4">
+                            <span class="text-2xl">📊</span>
+                        </div>
+                        <h3 class="benefitTitle text-xl font-semibold mb-3 text-secondary">パーソナライズ分析レポート</h3>
+                        <p class="benefitDescription text-gray-300 text-sm">学習の好みと目標に基づいて、毎月カスタマイズされた分析レポートを提供し、賢明な意思決定をサポート。</p>
+                    </div>
+                    
+                    <div class="benefitCard glass-effect rounded-xl p-6 transform hover:scale-105 transition-all duration-300">
+                        <div class="benefitIcon w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-4">
+                            <span class="text-2xl">🏆</span>
+                        </div>
+                        <h3 class="benefitTitle text-xl font-semibold mb-3 text-secondary">コミュニティチャレンジと報酬</h3>
+                        <p class="benefitDescription text-gray-300 text-sm">コミュニティチャレンジに参加し、報酬と栄誉を獲得して、継続的な学習と実践への意欲を高めます。</p>
+                    </div>
+                    
+                    <div class="benefitCard glass-effect rounded-xl p-6 transform hover:scale-105 transition-all duration-300">
+                        <div class="benefitIcon w-12 h-12 bg-secondary rounded-full flex items-center justify-center mb-4">
+                            <span class="text-2xl">🤝</span>
+                        </div>
+                        <h3 class="benefitTitle text-xl font-semibold mb-3 text-secondary">オフライン活動優先参加</h3>
+                        <p class="benefitDescription text-gray-300 text-sm">オフラインセミナーやイベントに無料または優先参加し、ネットワークを拡大し、経験を共有。</p>
                     </div>
                 </div>
             </div>
@@ -325,11 +388,67 @@
                 <div class="footerLinks space-x-6 mb-4">
                     <a href="Privacy.html" class="footerLink text-gray-400 hover:text-secondary transition-colors">プライバシーポリシー</a>
                     <a href="terms.html" class="footerLink text-gray-400 hover:text-secondary transition-colors">利用規約</a>
-					 <a href="Disclaimer.html" class="footerLink text-gray-400 hover:text-secondary transition-colors">免責事項</a>
+					  <a href="Disclaimer.html" class="footerLink text-gray-400 hover:text-secondary transition-colors">免責事項</a>
                 </div>
-                <p class="copyrightText text-gray-500 text-sm">© 2024 AI教育プラットフォーム. All rights reserved.</p>
+                <p class="copyrightText text-gray-500 text-sm">© 2025プラットフォーム. All rights reserved.</p>
             </div>
         </footer>
+    </div>
+
+    <!-- ログイン/登録モーダル -->
+    <div id="loginModal" class="fixed inset-0 bg-black bg-opacity-50 z-[100] hidden items-center justify-center">
+        <div class="modalContent bg-depth rounded-xl p-8 w-full max-w-md mx-4 relative">
+            <button onclick="hideLoginModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl">&times;</button>
+            
+            <div class="modalTabs flex mb-6">
+                <button onclick="showLogin()" id="loginTab" class="tabButton flex-1 py-2 px-4 bg-secondary text-white rounded-l-lg font-semibold">ログイン</button>
+                <button onclick="showRegister()" id="registerTab" class="tabButton flex-1 py-2 px-4 bg-gray-600 text-gray-300 rounded-r-lg font-semibold">登録</button>
+            </div>
+            
+            <!-- ログインフォーム -->
+            <div id="loginForm" class="authForm">
+                <h3 class="formTitle text-2xl font-bold text-white mb-6 text-center">ログイン</h3>
+                <form class="space-y-4">
+                    <div class="inputGroup">
+                        <label class="inputLabel block text-sm font-medium text-gray-300 mb-2">メールアドレス</label>
+                        <input type="email" class="inputField w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-secondary" placeholder="email@example.com">
+                    </div>
+                    <div class="inputGroup">
+                        <label class="inputLabel block text-sm font-medium text-gray-300 mb-2">パスワード</label>
+                        <input type="password" class="inputField w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-secondary" placeholder="パスワード">
+                    </div>
+                    <button type="submit" class="submitButton w-full bg-secondary hover:bg-yellow-600 text-white font-bold py-3 px-4 rounded-lg transition-colors">
+                        ログイン
+                    </button>
+                </form>
+            </div>
+            
+            <!-- 登録フォーム -->
+            <div id="registerForm" class="authForm hidden">
+                <h3 class="formTitle text-2xl font-bold text-white mb-6 text-center">新規登録</h3>
+                <form class="space-y-4">
+                    <div class="inputGroup">
+                        <label class="inputLabel block text-sm font-medium text-gray-300 mb-2">お名前</label>
+                        <input type="text" class="inputField w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-secondary" placeholder="お名前">
+                    </div>
+                    <div class="inputGroup">
+                        <label class="inputLabel block text-sm font-medium text-gray-300 mb-2">メールアドレス</label>
+                        <input type="email" class="inputField w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-secondary" placeholder="email@example.com">
+                    </div>
+                    <div class="inputGroup">
+                        <label class="inputLabel block text-sm font-medium text-gray-300 mb-2">パスワード</label>
+                        <input type="password" class="inputField w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-secondary" placeholder="パスワード">
+                    </div>
+                    <div class="inputGroup">
+                        <label class="inputLabel block text-sm font-medium text-gray-300 mb-2">パスワード確認</label>
+                        <input type="password" class="inputField w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-secondary" placeholder="パスワード確認">
+                    </div>
+                    <button type="submit" class="submitButton w-full bg-secondary hover:bg-yellow-600 text-white font-bold py-3 px-4 rounded-lg transition-colors">
+                        登録
+                    </button>
+                </form>
+            </div>
+        </div>
     </div>
 
     <!-- フローティングボタン -->
@@ -340,7 +459,47 @@
     </div>
 
     <script>
-      
+        function k2() {
+            // LINE連携のロジックをここに実装
+            console.log('LINE連携ボタンがクリックされました');
+            // window.open('LINE_URL', '_blank');
+        }
+
+        // ログイン/登録モーダル関数
+        function showLoginModal() {
+            document.getElementById('loginModal').classList.remove('hidden');
+            document.getElementById('loginModal').classList.add('flex');
+        }
+
+        function hideLoginModal() {
+            document.getElementById('loginModal').classList.add('hidden');
+            document.getElementById('loginModal').classList.remove('flex');
+        }
+
+        function showLogin() {
+            document.getElementById('loginForm').classList.remove('hidden');
+            document.getElementById('registerForm').classList.add('hidden');
+            document.getElementById('loginTab').classList.add('bg-secondary', 'text-white');
+            document.getElementById('loginTab').classList.remove('bg-gray-600', 'text-gray-300');
+            document.getElementById('registerTab').classList.add('bg-gray-600', 'text-gray-300');
+            document.getElementById('registerTab').classList.remove('bg-secondary', 'text-white');
+        }
+
+        function showRegister() {
+            document.getElementById('registerForm').classList.remove('hidden');
+            document.getElementById('loginForm').classList.add('hidden');
+            document.getElementById('registerTab').classList.add('bg-secondary', 'text-white');
+            document.getElementById('registerTab').classList.remove('bg-gray-600', 'text-gray-300');
+            document.getElementById('loginTab').classList.add('bg-gray-600', 'text-gray-300');
+            document.getElementById('loginTab').classList.remove('bg-secondary', 'text-white');
+        }
+
+        // モーダル外クリックで閉じる
+        document.getElementById('loginModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                hideLoginModal();
+            }
+        });
 
         // ダークモード対応
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {

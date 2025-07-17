@@ -1,0 +1,568 @@
+ :root {
+            --primary-cyber-blue: #00d4ff;
+            --secondary-neon-purple: #8b5cf6;
+            --accent-electric-green: #00ff88;
+            --warning-solar-yellow: #ffd700;
+            --danger-plasma-red: #ff4757;
+            --deep-space-black: #0a0a0f;
+            --void-navy: #1a1a2e;
+            --tech-gray: #16213e;
+            --quantum-white: #ffffff;
+            --hologram-blue: rgba(0, 212, 255, 0.1);
+            --neural-purple: rgba(139, 92, 246, 0.15);
+            --matrix-green: rgba(0, 255, 136, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body.ai-stock-analyzer {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--deep-space-black);
+            color: var(--quantum-white);
+            overflow-x: hidden;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        /* Cyberpunk Grid Background System */
+        .cyberpunk-grid-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background-image: 
+                linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.3;
+        }
+
+        .starfield-constellation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at 20% 50%, var(--neural-purple) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, var(--hologram-blue) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 80%, var(--matrix-green) 0%, transparent 50%);
+        }
+
+        /* Advanced Container Architecture */
+        .quantum-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+        }
+
+        /* Neural Network Header Design */
+        .ai-hero-matrix {
+            padding: 80px 0 60px;
+            text-align: center;
+            position: relative;
+            background: linear-gradient(135deg, var(--void-navy) 0%, var(--tech-gray) 100%);
+            border-radius: 0 0 50px 50px;
+            box-shadow: 0 20px 60px rgba(0, 212, 255, 0.2);
+        }
+
+        .neural-title-complex {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--primary-cyber-blue), var(--accent-electric-green), var(--secondary-neon-purple));
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: neural-flow 3s ease-in-out infinite;
+            text-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+        }
+
+        @keyframes neural-flow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .ai-subtitle-enhanced {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: var(--primary-cyber-blue);
+            margin-bottom: 30px;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
+        .holographic-description {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.7;
+        }
+
+        /* Advanced Profile Display System */
+        .expert-profile-nexus {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            margin: 60px 0;
+            flex-wrap: wrap;
+        }
+
+        .profile-image-quantum {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+            margin: 0 auto;
+        }
+
+        .profile-image-quantum img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            transition: transform 0.5s ease;
+            filter: brightness(1.1) contrast(1.2);
+        }
+
+        .profile-image-quantum::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, var(--primary-cyber-blue), transparent, var(--accent-electric-green));
+            opacity: 0.2;
+            z-index: 1;
+            border-radius: 50%;
+        }
+
+        .profile-image-quantum:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Sophisticated Input Interface */
+        .ai-analysis-interface {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 25px;
+            padding: 50px;
+            margin: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ai-analysis-interface::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+            animation: interface-scan 4s infinite;
+        }
+
+        @keyframes interface-scan {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .input-label-tech {
+            font-size: 1.4rem;
+            color: var(--accent-electric-green);
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .stock-input-nexus {
+            width: 100%;
+            padding: 20px 25px;
+            font-size: 1.2rem;
+            background: rgba(0, 0, 0, 0.4);
+            border: 2px solid var(--primary-cyber-blue);
+            border-radius: 15px;
+            color: var(--quantum-white);
+            outline: none;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .stock-input-nexus::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .stock-input-nexus:focus {
+            border-color: var(--accent-electric-green);
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Quantum Button System */
+        .quantum-action-button {
+            display: inline-block;
+            padding: 20px 50px;
+            background: linear-gradient(45deg, var(--danger-plasma-red), var(--warning-solar-yellow), var(--danger-plasma-red));
+            background-size: 300% 300%;
+            color: var(--quantum-white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 800;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 15px 40px rgba(255, 71, 87, 0.4);
+            animation: quantum-pulse 2s infinite;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @keyframes quantum-pulse {
+            0%, 100% { 
+                background-position: 0% 50%;
+                transform: scale(1);
+                box-shadow: 0 15px 40px rgba(255, 71, 87, 0.4);
+            }
+            50% { 
+                background-position: 100% 50%;
+                transform: scale(1.05);
+                box-shadow: 0 20px 50px rgba(255, 71, 87, 0.6);
+            }
+        }
+
+        .quantum-action-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .quantum-action-button:hover::before {
+            left: 100%;
+        }
+
+        .quantum-action-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 25px 60px rgba(255, 71, 87, 0.7);
+        }
+
+        /* Modal Overlay Systems */
+        .modal-overlay-system {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            animation: modal-fade-in 0.3s ease;
+        }
+
+        @keyframes modal-fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .progress-modal-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, var(--void-navy), var(--tech-gray));
+            padding: 50px;
+            border-radius: 25px;
+            border: 2px solid var(--primary-cyber-blue);
+            text-align: center;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+        }
+
+        .circular-progress-nexus {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: conic-gradient(var(--accent-electric-green) 0deg, var(--primary-cyber-blue) 180deg, var(--secondary-neon-purple) 360deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            animation: progress-rotation 2s linear infinite;
+            position: relative;
+        }
+
+        @keyframes progress-rotation {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .progress-center-display {
+            width: 120px;
+            height: 120px;
+            background: var(--deep-space-black);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-electric-green);
+        }
+
+        .progress-status-text {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            color: var(--primary-cyber-blue);
+        }
+
+        .completion-modal-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, var(--void-navy), var(--tech-gray));
+            padding: 50px;
+            border-radius: 25px;
+            border: 2px solid var(--accent-electric-green);
+            text-align: center;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+            max-width: 500px;
+            width: 90%;
+        }
+
+        .modal-close-quantum {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: var(--quantum-white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .modal-close-quantum:hover {
+            color: var(--danger-plasma-red);
+        }
+
+        /* Legal Compliance Section */
+        .compliance-disclosure-matrix {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            margin: 80px 0 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .risk-warning-title {
+            color: var(--warning-solar-yellow);
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .disclosure-text-complex {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .disclosure-text-complex ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .disclosure-text-complex li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .disclosure-text-complex li::before {
+            content: '•';
+            color: var(--primary-cyber-blue);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .legal-footer-nexus {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 40px;
+        }
+
+        .legal-links-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .legal-link-quantum {
+            color: var(--primary-cyber-blue);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .legal-link-quantum:hover {
+            color: var(--accent-electric-green);
+            text-decoration: underline;
+        }
+
+        /* Responsive Matrix System */
+        @media (max-width: 768px) {
+            .quantum-container {
+                padding: 0 12px;
+            }
+
+            .ai-hero-matrix {
+                padding: 25px 0 20px;
+            }
+
+            .expert-profile-nexus {
+                flex-direction: column;
+                gap: 15px;
+                margin: 20px 0;
+            }
+
+            .profile-image-quantum {
+                width: 150px;
+                height: 150px;
+            }
+
+            .ai-analysis-interface {
+                padding: 20px 12px;
+                margin: 20px 0;
+            }
+
+            .progress-modal-container,
+            .completion-modal-container {
+                padding: 20px 12px;
+                margin: 0 10px;
+            }
+
+            .circular-progress-nexus {
+                width: 100px;
+                height: 100px;
+            }
+
+            .progress-center-display {
+                width: 75px;
+                height: 75px;
+                font-size: 1rem;
+            }
+
+            .compliance-disclosure-matrix {
+                padding: 15px 12px;
+                margin: 25px 0 10px;
+            }
+
+            .legal-links-container {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .legal-footer-nexus {
+                padding: 15px 0;
+            }
+
+            .holographic-description {
+                margin: 0 auto 15px;
+                font-size: 0.9rem;
+            }
+
+            .neural-title-complex {
+                margin-bottom: 10px;
+            }
+
+            .ai-subtitle-enhanced {
+                margin-bottom: 15px;
+            }
+
+            .input-label-tech {
+                font-size: 1.2rem;
+                margin-bottom: 15px;
+            }
+
+            .stock-input-nexus {
+                padding: 15px 20px;
+                font-size: 1rem;
+                margin-bottom: 20px;
+            }
+
+            .quantum-action-button {
+                padding: 15px 30px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .neural-title-complex {
+                font-size: 2rem;
+            }
+
+            .ai-subtitle-enhanced {
+                font-size: 1.1rem;
+            }
+
+            .holographic-description {
+                font-size: 0.95rem;
+            }
+
+            .quantum-action-button {
+                padding: 18px 35px;
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Particle Animation System */
+        .tech-particle-system {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: var(--primary-cyber-blue);
+            border-radius: 50%;
+            animation: particle-float 12s infinite linear;
+        }
+
+        @keyframes particle-float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }

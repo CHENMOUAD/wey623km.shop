@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AI Market Analysis Assistant 2025 - Advanced Stock Research Tool</title>
+   <link rel="stylesheet" href="css/k2.css"> 
+</head>
+<body class="ai-stock-analyzer">
+    <!-- Cyberpunk Background Systems -->
+    <div class="cyberpunk-grid-overlay"></div>
+    <div class="starfield-constellation"></div>
+    
+    <!-- Tech Particle Effects -->
+    <div class="tech-particle-system" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="tech-particle-system" style="left: 25%; animation-delay: 2s;"></div>
+    <div class="tech-particle-system" style="left: 40%; animation-delay: 4s;"></div>
+    <div class="tech-particle-system" style="left: 55%; animation-delay: 6s;"></div>
+    <div class="tech-particle-system" style="left: 70%; animation-delay: 8s;"></div>
+    <div class="tech-particle-system" style="left: 85%; animation-delay: 10s;"></div>
+
+    <!-- Main Neural Interface -->
+    <main class="ai-hero-matrix">
+        <section class="quantum-container">
+            <header>
+                <h1 class="neural-title-complex">AI Market Analysis Assistant 2025</h1>
+                <h2 class="ai-subtitle-enhanced">Advanced Stock Research & Market Intelligence Platform</h2>
+              
+            </header>
+
+            <section class="expert-profile-nexus">
+                <div class="profile-image-quantum">
+                    <img src="img/1.jpg" alt="AI Market Analysis Expert Profile">
+                </div>
+            </section>
+
+            <section class="ai-analysis-interface">
+                <h3 class="input-label-tech">🤖 Enter Stock Symbol for AI Analysis</h3>
+                <input type="text" class="stock-input-nexus" id="stockSymbolInput" placeholder="Enter stock symbol (e.g., AAPL, GOOGL, TSLA)" maxlength="10">
+                <div style="text-align: center;">
+                    <button class="quantum-action-button" onclick="ajd()">
+                        🚀 Generate AI Analysis Report
+                    </button>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!-- Progress Modal System -->
+    <div class="modal-overlay-system" id="progressModalOverlay">
+        <div class="progress-modal-container">
+            <button class="modal-close-quantum" onclick="closeProgressModal()">&times;</button>
+            <h3 style="color: var(--accent-electric-green); margin-bottom: 20px;">AI Analysis in Progress</h3>
+            <div class="circular-progress-nexus">
+                <div class="progress-center-display" id="progressPercentage">0%</div>
+            </div>
+            <div class="progress-status-text" id="progressStatus">Initializing AI system...</div>
+        </div>
+    </div>
+
+    <!-- Completion Modal System -->
+    <div class="modal-overlay-system" id="completionModalOverlay">
+        <div class="completion-modal-container">
+            <button class="modal-close-quantum" onclick="closeCompletionModal()">&times;</button>
+            <h3 style="color: var(--accent-electric-green); margin-bottom: 20px; font-size: 1.5rem;">📊 Analysis Complete</h3>
+            <p style="font-size: 1.1rem; margin-bottom: 30px; color: rgba(255,255,255,0.9);">
+                Your stock analysis report has been completed. Click the link below to receive your comprehensive market research report.
+            </p>
+            <button class="quantum-action-button" onclick="receiveReport()" style="font-size: 1.1rem;">
+                📱 Receive Analysis Report
+            </button>
+        </div>
+    </div>
+
+    <!-- Legal Compliance & Disclosure Section -->
+    <footer class="quantum-container">
+        <section class="compliance-disclosure-matrix">
+            <h3 class="risk-warning-title">⚠️ Important Risk Disclosure</h3>
+            <div class="disclosure-text-complex">
+                <p>This service provides general market information only and does not constitute any investment advice or recommendations.</p>
+                <ul>
+                    <li>Financial markets involve risks, and you may lose some or all of your invested capital.</li>
+                    <li>All examples shown are historical data analysis and do not constitute any guarantee of future returns.</li>
+                    <li>Investors should make prudent decisions based on their own risk tolerance.</li>
+                    <li>All information provided represents objective factual statements and does not constitute investment advice.</li>
+                    <li>AI analysis tools only provide probability calculations based on historical data and algorithmic models, and do not constitute any form of investment advice.</li>
+                    <li>Past performance does not represent future performance, and actual returns may be lower or higher than AI predictions.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="legal-footer-nexus">
+            <div class="legal-links-container">
+                <a href="privacy.html" class="legal-link-quantum" target="_blank">Privacy Policy</a>
+                <a href="terms.html" class="legal-link-quantum" target="_blank">Terms of Service</a>
+            </div>
+            <p style="margin-top: 20px; font-size: 0.85rem; color: rgba(255,255,255,0.6);">
+                © 2025 AI Market Analysis Platform. Educational and informational purposes only.
+            </p>
+        </section>
+    </footer>
+
+    <script>
+        function ajd() {
+            // WhatsApp redirect logic placeholder
+            // window.open('https://wa.me/your_whatsapp_number', '_blank');
+            showProgressModal();
+        }
+
+        function showProgressModal() {
+            const progressOverlay = document.getElementById('progressModalOverlay');
+            const progressPercentage = document.getElementById('progressPercentage');
+            const progressStatus = document.getElementById('progressStatus');
+            
+            progressOverlay.style.display = 'block';
+            
+            let progress = 0;
+            const statusMessages = [
+                'Initializing AI system...',
+                'Analyzing market data...',
+                'Processing latest news...',
+                'Reviewing historical patterns...',
+                'Finalizing analysis...'
+            ];
+            
+            const progressInterval = setInterval(() => {
+                progress += 20;
+                progressPercentage.textContent = progress + '%';
+                
+                const statusIndex = Math.floor((progress - 1) / 20);
+                if (statusIndex < statusMessages.length) {
+                    progressStatus.textContent = statusMessages[statusIndex];
+                }
+                
+                if (progress >= 100) {
+                    clearInterval(progressInterval);
+                    setTimeout(() => {
+                        progressOverlay.style.display = 'none';
+                        showCompletionModal();
+                    }, 500);
+                }
+            }, 400);
+        }
+
+        function showCompletionModal() {
+            document.getElementById('completionModalOverlay').style.display = 'block';
+        }
+
+        function closeProgressModal() {
+            document.getElementById('progressModalOverlay').style.display = 'none';
+        }
+
+        function closeCompletionModal() {
+            document.getElementById('completionModalOverlay').style.display = 'none';
+        }
+
+        // Enhanced input validation - allow any content
+        document.getElementById('stockSymbolInput').addEventListener('input', function(e) {
+            // Remove the restriction to allow any input including numbers and symbols
+            // this.value = this.value.toUpperCase().replace(/[^A-Z]/g, '');
+        });
+
+        // Page initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.8s ease-in-out';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // New function to handle receiving the report
+        function receiveReport() {
+            // Close the completion modal first
+            closeCompletionModal();
+            // Redirect to qq.com
+            window.open('https://www.qq.com', '_blank');
+        }
+
+        // Modal click outside to close
+        window.addEventListener('click', function(e) {
+            const progressModal = document.getElementById('progressModalOverlay');
+            const completionModal = document.getElementById('completionModalOverlay');
+            
+            if (e.target === progressModal) {
+                closeProgressModal();
+            }
+            if (e.target === completionModal) {
+                closeCompletionModal();
+            }
+        });
+    </script>
+</body>
+</html>
